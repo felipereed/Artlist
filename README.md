@@ -80,6 +80,9 @@ _**Artlist** MVP_
 
 ![](Desktop.gif)
 
+- Tablet prototype link: https://bit.ly/3dDUj5C
+
+![](tablet.gif)
 
 
 
