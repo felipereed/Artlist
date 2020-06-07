@@ -72,9 +72,13 @@ _**Artlist** MVP_
 
 #### Wireframes
 
+- Mobile prototype link: https://bit.ly/3gZ5Nm5
 ![](mobile.gif)
 
-- Mobile prototype link: https://bit.ly/3gZ5Nm5
+- Desktop prototype link: https://bit.ly/2UdemQD
+![](Desktop.gif)
+
+
 
 
 
