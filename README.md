@@ -72,31 +72,11 @@ _**Artlist** MVP_
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
-
-![Mobile Gif](https://imgur.com/SMBPF81)
+![](mobile.gif)
 
 - Mobile prototype link: https://bit.ly/3gZ5Nm5
 
-![Dummy Link](url)
 
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
