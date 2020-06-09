@@ -144,17 +144,17 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Layout              |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Welcome             |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Sign Up             |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Log In              |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Home                |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Details             |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Product             |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Category            |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create              |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Update              |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Layout              |    M     |     4 hrs      |     0         |     TBD     |
+| Welcome             |    M     |     2 hrs      |     0         |     TBD     |
+| Sign Up             |    H     |     5 hrs      |     0         |     TBD     |
+| Log In              |    H     |     4 hrs      |     0         |     TBD     |
+| Home                |    H     |     14 hrs     |     0         |     TBD     |
+| Details             |    H     |     3 hrs      |     0         |     TBD     |
+| Product             |    H     |     3 hrs      |     0         |     TBD     |
+| Category            |    H     |     8 hrs      |     0         |     TBD     |
+| Create              |    H     |     4 hrs      |     0         |     TBD     |
+| Update              |    H     |     5 hrs      |     0         |     TBD     |
+| TOTAL               |          |     52 hrs     |     0         |     TBD     |
 
 
 
