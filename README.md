@@ -57,7 +57,6 @@ _**Artlist** MVP_
 
 ### Libraries
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project.
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
