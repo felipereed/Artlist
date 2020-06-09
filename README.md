@@ -92,20 +92,30 @@ _**Artlist** MVP_
 ![](Diagram.png)
 
 #### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
+ 
 ``` structure
 
 src
 |__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
+      |__ icons
+      |__ logo
       |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ Layout.js
+      |__ Welcome.js
+      |__ SignUp.js
+      |__ LogIn.js
+      |__ Home.js
+      |__ Shared.js
+              |__Product.js
+              |__Category.js
+      |__ Details.js
+      |__ Artist.js
+      |__ Create.js
+      |__ Update.js
 |__ services/
+      |__ user.js
+      |__ product.js
 
 ```
 
@@ -115,11 +125,18 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Layout    | class      |   y   |   y   | _Contains all shared UI across all components._               |
+|  Welcome     | functional |   n   |   n   | _The Welcome Page is the entry point with links for Sign Up, Log In, browse, and logo._ |
+|   Sign Up    |   class    |   n   |   n   | _Contains a form that allows the user to create an account._      |
+| Log In       | functional |   n   |   n   | _Contains a form that allows the user to log in._                 |
+|    Home      | functional |   y   |   n   | _Displays a list of categories and products._ |
+|    Details   | functional |   n   |   y   | _Provides all products information and link to artist’s page. Also provides a link to email the artist in case the user in interested in purchasing the piece._               |
+|  Artist      | functional |   y   |   y   | _Displays all products posted by a specific artist._       |
+|   Create     |   class    |   n   |   n   | _contains a form that allows user to post item for sale._      |
+| Update       | functional |   y   |   y   | _Displays all products that belongs to the user with edit and delete capability._|
+|  Product      | functional |   y   |   y   | _Displays product information._       |
+|  Category      | functional |   y   |   y   | _Displays the categories that can be used as a filter._       |
+
 
 #### Component Estimates
 
@@ -127,11 +144,19 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Layout              |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Welcome             |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Sign Up             |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Log In              |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Home                |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Details             |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Product             |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Category            |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create              |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Update              |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+
 
 <br>
 
