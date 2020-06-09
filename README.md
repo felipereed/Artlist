@@ -164,7 +164,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model.
+![](BE.png)
 
 <br>
 
@@ -172,7 +172,11 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- _Add Artist Profile with profile pic._
+- _Implement a search feature based on price, search terms, tags, etc._
+- _Add a third party purchasing so the transaction can be done within the site._
+
+
 
 ***
 
