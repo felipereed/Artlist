@@ -69,22 +69,22 @@ _**Artlist** MVP_
 
 - Mobile prototype: https://bit.ly/3gZ5Nm5
 
-![](mobile.gif)
+![](/README_files/mobile.gif)
 
 - Desktop prototype: https://bit.ly/2UdemQD
 
-![](Desktop.gif)
+![](/README_files/Desktop.gif)
 
 - Tablet prototype: https://bit.ly/3dDUj5C
 
-![](tablet.gif)
+![](/README_files/tablet.gif)
 
 
 
 
 #### Component Tree
 
-![](Diagram.png)
+![](/README_files/Diagram.png)
 
 #### Component Hierarchy
  
@@ -155,7 +155,7 @@ src
 
 #### ERD Model
 
-![](BE.png)
+![](/README_files/BE.png)
 
 <br>
 
