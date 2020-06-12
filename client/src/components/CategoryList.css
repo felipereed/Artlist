@@ -1,0 +1,30 @@
+.categorylist-horizontal-scroll {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.categorylist-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.categorylist-title > h2 {
+  color: grey;
+  font-weight: 500;
+}
+
+.categorylist-title {
+  margin: 25px;
+}
