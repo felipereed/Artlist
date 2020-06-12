@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import "./SignUp.css";
 import { Redirect } from "react-router-dom";
 
@@ -16,7 +16,7 @@ export default class SignUp extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
-      [name]: value,
+      [name]: value
     });
   };
 
@@ -48,45 +48,51 @@ export default class SignUp extends Component {
     }
     return (
       <div>
-        <img src="images/logo.png" alt="logo"></img>
-        <form onSubmit={this.handleSubmit}>
+        <img className='signup-logo-container' src="images/logo.png" alt="logo"></img>
+        <form className='signup-form-container' onSubmit={this.handleSubmit}>
           <input
+            className='signup-form'
             name="username"
             placeholder="username"
             type="text"
             onChange={this.handleChange}
           />
           <input
+            className='signup-form'
             name="pronouns"
             placeholder="pronouns"
             type="text"
             onChange={this.handleChange}
           />
           <input
+            className='signup-form'
             name="email"
             placeholder="email"
             type="text"
             onChange={this.handleChange}
           />
           <input
+            className='signup-form'
             name="website"
             placeholder="website"
             type="text"
             onChange={this.handleChange}
           />
           <input
+            className='signup-form'
             name="password"
             placeholder="password"
             type="password"
             onChange={this.handleChange}
           />
           <input
+            className='signup-form'
             name="confirmPassword"
-            placeholder=" confirm password"
+            placeholder="confirm password"
             type="password"
             onChange={this.handleChange}
           />
-          <input type="submit" value="submit" />
+          <button className='signup-submit-button' type="submit" value="submit">Submit</button>
         </form>
       </div>
     );

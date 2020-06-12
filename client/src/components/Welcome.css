@@ -1,23 +1,65 @@
 .welcome-header-links {
+  padding: 40px 40px 70px 40px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.welcome-deader-text {
+  text-decoration: None;
+  font-size: 25px;
+  font-weight: bold;
+  color: #2D4357
 }
 
 .welcome-image-container {
+ padding: 0 0 80px 0;
+}
 
+.welcome-button-container {
+  margin: 0 0 40px 0;
 }
 
 .welcome-sign-up-button {
-
+  background-color: #F7AE4E;
+  color: #2D4357;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid #F7AE4E;
+  box-shadow: 5px 10px 18px #888888
 }
 
-.welcome-log-in-button {
-
+.welcome-log-in-link {
+  text-decoration: none
 }
 
-.elcome-browse-link {
+.welcome-log-in-link-text {
+  color: #2D4357;
+  font-size: 25px;
+}
 
+.welcome-browse-link {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: lighter;
+  color: #2D4357;
+}
+
+.welcome-browse-link > p {
+  margin-bottom: 90px;
 }
 
 .welcome-app-description {
+  background-color: #F7AE4E;
+  padding: 40px 0 40px 0;
+}
 
+.welcome-app-description-text {
+  font-size: 25px;
+  color: #2D4357;
+  margin: 20px
+}
+
+.welcome-footer {
+  background-color: #F7AE4E;
 }

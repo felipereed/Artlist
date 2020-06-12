@@ -9,26 +9,26 @@ export default class Welcome extends Component {
     return (
       <div>
         <div className='welcome-header-links'>
-          <a href="#description">About</a>
-          <a href="#description">Contact</a>
+          <a className='welcome-deader-text' href="#description">About</a>
+          <a className='welcome-deader-text' href="#description">Contact</a>
         </div>
         <div className='welcome-image-container'>
           <img src='/images/logo.png' alt='logo'></img>
         </div>
-        <div className='welcome-sign-up-button'>
-          <Link to='/sign-up'><button>Sign Up</button></Link>
+        <div className='welcome-button-container'>
+          <Link to='/sign-up'><button className='welcome-sign-up-button'>Sign up</button></Link>
         </div>
-        <div className='welcome-log-in-button'>
-          <Link to='/log-in'><p>Already a member? Log in</p></Link>
+        <div>
+          <Link className='welcome-log-in-link' to='/log-in'><p className='welcome-log-in-link-text'>Already a member? Log in</p></Link>
         </div>
-        <div className='welcome-browse-link'>
-          <Link to='/home'><p>Browse</p></Link>
+        <div>
+          <Link className='welcome-browse-link' to='/home'><p>Browse</p></Link>
         </div>
         <div id='description' className='welcome-app-description'>
-          <p>
+          <p className='welcome-app-description-text'>
             <em><strong>ARTlist Marketplace</strong></em> is an online platform that allows striving independent artists to showcase and sell their original pieces in their own terms.
           </p>
-          <div>
+          <div className='welcome-footer'>
            <Footer />
           </div>
         </div>

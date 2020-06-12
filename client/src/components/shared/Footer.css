@@ -1,3 +1,7 @@
 .footer-image-container {
-  
+  display: flex;
+  justify-content: center;
+  height: 64px;
+  background-color:#F7AE4E;
+  padding: 20px;
 }
