@@ -5,3 +5,9 @@
   background-color:#F7AE4E;
   padding: 20px;
 }
+
+.footer-icons {
+  max-height: 50px;
+  max-width: 50px;
+  margin: auto 5px;
+}

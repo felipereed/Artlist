@@ -5,12 +5,8 @@ import './Product.css'
 export default class Product extends Component {
   render() {
     // const product = this.props.product
-    const product = {
-      image_url: 'https://i.imgur.com/FpSahC6.png',
-      name: 'test',
-      price: '50',
-      username: 'Felipe'
-    }
+    const product = this.props.product
+
     return (
       <div className='product-container'>
         <div className='product-image-container'>
@@ -18,7 +14,7 @@ export default class Product extends Component {
         </div>
         <div className='product-info'>
         <p>{product.name}</p>
-        <p>${product.price}</p>
+        <p>{product.price}</p>
         <p>By {product.username}</p>
         </div>
         <Link className='product-more-details-link' to={`/${product.id}/details`} >More details</Link>
