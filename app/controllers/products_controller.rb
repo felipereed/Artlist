@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.includes(:category)
+    @products = Product.joins(:user).select('products.*, users.username').all
     puts @products.name
     render json: @products
   end

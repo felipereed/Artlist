@@ -101,7 +101,7 @@ export default class App extends Component {
             <Route
               path='/w'
               render={() => (
-                <Product />
+                  <Product />
               )}  
             ></Route>
           </Switch>

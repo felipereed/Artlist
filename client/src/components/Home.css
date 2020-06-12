@@ -3,3 +3,9 @@
   width: 80%;
   border-top-color: rgba(0, 0, 0, 0.3);
 }
+
+.home-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
