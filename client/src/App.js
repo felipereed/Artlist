@@ -11,9 +11,11 @@ import CreateProduct from "./components/CreateProduct"
 import Home from "./components/Home"
 import SignUp from "./components/SignUp";
 import Layout from "./components/shared/Layout";
-import { createUser, validateUser } from "./services/auth";
+import { createUser, validateUser, verifyUser } from "./services/auth";
 import { getCategories } from "./services/category"
 import LogIn from "./components/LogIn";
+import { createProduct } from './services/product'
+import CategoryList from "./components/CategoryList";
 
 export default class App extends Component {
   state = {
@@ -29,6 +31,7 @@ export default class App extends Component {
     console.log(options);
     
     this.setState({ categories: options })
+    this.handleVerify()
   }
 
   handleCreateUser = async (user) => {
@@ -45,7 +48,14 @@ export default class App extends Component {
     this.setState({ currentUser: currentUser })
   }
 
+  handleVerify = async () => {
+    const currentUser = await verifyUser();
+    this.setState({ currentUser })
+  }
 
+  handleCreateProduct = async (product) => {
+    await createProduct(product)
+  }
 
   render() {
     return (
@@ -82,11 +92,18 @@ export default class App extends Component {
               path="/create"
               render={() => (
                 <Layout>
-                  <CreateProduct categories={this.state.categories} />
+                  <CreateProduct handleCreateProduct={this.handleCreateProduct} categories={this.state.categories} user={this.state.currentUser}
+                  />
                 </Layout>
               )}
             ></Route>
             <Route path="/:id/update"></Route>
+            <Route
+              path='/w'
+              render={() => (
+                <CategoryList />
+              )}  
+            ></Route>
           </Switch>
         </Router>
       </div>

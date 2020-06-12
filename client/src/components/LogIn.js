@@ -44,12 +44,14 @@ export default class LogIn extends Component {
             name='username'
             placeholder='username'
             type='text'
+            onChange={this.handleChange}
           />
           <input 
             className='login-form'
             name='password'
             placeholder='password'
             type='password'
+            onChange={this.handleChange}
           />
           <button className='login-submit-button' type='submit' value='submit'>Log in</button>
         </form>

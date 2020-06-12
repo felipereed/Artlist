@@ -7,7 +7,7 @@ export default class CreateProduct extends Component {
   state = {
     image_url: '',
     name: '',
-    type: '',
+    category_id: '',
     price: '',
     redirect: false
   }
@@ -18,13 +18,19 @@ export default class CreateProduct extends Component {
       [name]: value
     })
   }
+  
+  handleSelectChange = (e) => {
+    this.setState({
+      category_id: e.value
+    })
+  }
 
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.handleCreateProduct({
       image_url: this.state.image_url,
       name: this.state.name,
-      type: this.state.type,
+      category_id: this.state.category_id,
       price: this.state.price
     })
     this.setState({
@@ -61,10 +67,9 @@ export default class CreateProduct extends Component {
           />
           <div className='create-form-select'>
           <Select
-            name="category_id"
             placeholder="type"
             options={this.props.categories}
-            onChange={this.handleChange}
+            onChange={this.handleSelectChange}
           />
           </div>
           <input
