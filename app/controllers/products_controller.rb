@@ -6,8 +6,8 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
-
+    @products = Product.includes(:category)
+    puts @products.name
     render json: @products
   end
 

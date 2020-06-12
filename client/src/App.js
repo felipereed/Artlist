@@ -15,7 +15,7 @@ import { createUser, validateUser, verifyUser } from "./services/auth";
 import { getCategories } from "./services/category"
 import LogIn from "./components/LogIn";
 import { createProduct } from './services/product'
-import CategoryList from "./components/CategoryList";
+import Product from "./components/Product";
 
 export default class App extends Component {
   state = {
@@ -101,7 +101,7 @@ export default class App extends Component {
             <Route
               path='/w'
               render={() => (
-                <CategoryList />
+                <Product />
               )}  
             ></Route>
           </Switch>
