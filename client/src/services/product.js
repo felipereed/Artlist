@@ -22,3 +22,7 @@ export const getProductsByUser = async (id) => {
 export const editProduct = async (product) => {
   const resp = await api.put(`/products/${product.id}`, { product })
 } 
+
+export const deleteProduct = async (id) => {
+  const resp = await api.delete(`/products/${id}`)
+}

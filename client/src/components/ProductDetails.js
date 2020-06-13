@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { getProduct } from "../services/product";
+import { getProduct, deleteProduct } from "../services/product";
 import './ProductDetails.css'
 import EmailArtistLink from "./EmailArtistLink";
 
@@ -18,15 +18,19 @@ export default class ProductDetails extends Component {
 
   handleProductDelete = async (e) => {
     // call api to delete product
-
+    await deleteProduct(this.state.product.id)
     // refresh the artist product list
   }
 
-  artistLoggedInRender(productId) {
+  artistLoggedInRender(productId, currentUserId) {
   return (
     <div className='product-details-edit-delete'>
-      <Link to={`/${productId}/edit`}><button className="product-details-submit-button">Edit</button></Link>
-      <button className="product-details-submit-button" onClick={this.handleProductDelete}>Delete</button>
+      <Link to={`/${productId}/edit`}>
+        <button className="product-details-submit-button">Edit</button>
+      </Link>
+      <Link to={`/${currentUserId}/artist`}>
+        <button className="product-details-submit-button" onClick={this.handleProductDelete}>Delete</button>
+      </Link>
     </div>
     
   )
@@ -71,7 +75,7 @@ export default class ProductDetails extends Component {
               <p>By {product.username}</p>
               
             </div>
-            {(this.artistPage(product.user_id)) ? this.artistLoggedInRender(product.id) : this.artistNotLoggedInRender(product) }
+            {(this.artistPage(product.user_id)) ? this.artistLoggedInRender(product.id, product.user_id) : this.artistNotLoggedInRender(product) }
           </div>
         ) : (
           <div>Loading...</div>
