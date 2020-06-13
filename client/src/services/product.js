@@ -13,3 +13,8 @@ export const getProduct = async (id) => {
   const resp = await api.get(`/products/${id}`)
   return resp.data
 }
+
+export const getProductsByUser = async (id) => {
+  const resp = await api.get(`/products/byuser/${id}`)
+  return resp.data
+}

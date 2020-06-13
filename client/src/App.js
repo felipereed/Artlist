@@ -17,6 +17,7 @@ import LogIn from "./components/LogIn";
 import { createProduct } from './services/product'
 import Product from "./components/Product";
 import ProductDetails from "./components/ProductDetails";
+import Artist from './components/Artist'
 
 export default class App extends Component {
   state = {
@@ -93,7 +94,13 @@ export default class App extends Component {
                   <ProductDetails productId={props.match.params.id} />
                 </Layout>
               )}></Route>
-            <Route path="/:id/artist"></Route>
+            <Route
+              path="/:id/artist"
+              render={(props) => (
+                <Layout>
+                  <Artist userId={props.match.params.id}/>
+                </Layout>
+              )}></Route>
             <Route
               path="/create"
               render={() => (
