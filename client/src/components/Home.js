@@ -58,7 +58,7 @@ export default class Home extends Component {
           <div></div>
         ) : (
           <div>
-            <button className="home-more-button">More products</button>
+            <button className="home-more-button" onClick={this.moreProducts}>More products</button>
           </div>
         )}
       </div>
