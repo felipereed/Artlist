@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { getProduct } from "../services/product";
 import './ProductDetails.css'
+import EmailArtistLink from "./EmailArtistLink";
 
 export default class ProductDetails extends Component {
   state = {
@@ -36,10 +37,7 @@ export default class ProductDetails extends Component {
             <div className="product-details-info">
               <p>{product.price}</p>
               <p>By {product.username}</p>
-              <div>
-                <a className='product-details-email-link' href={`mailto:${product.email}?subject=ARTlist: ${product.name} inquiry.&body=Hi, I saw your ${product.name} piece on ARTlist, and I would like to buy it. Can you please send me some information? Thanks!`}>Email artist for info</a>
-                <img className='product-details-email-icon' src='/images/emailartist.png'></img>
-              </div>
+              <EmailArtistLink email={product.email} name={product.name}/>
             </div>
             <Link className="" to={`/${product.user_id}/artist`}>
               <button className='product-details-submit-button' type="submit" value="submit">Artist's Page</button>

@@ -10,10 +10,6 @@
 
 }
 
-.product-detail-image-container {
-  
-}
-
 .product-details-image {
   max-width: 100%;
   box-shadow: 5px 10px 18px #888888;
@@ -34,15 +30,4 @@
   border: 1px solid #F7AE4E;
   box-shadow: 5px 10px 18px #888888;
   margin: 40px
-}
-
-.product-details-email-link {
-  /* text-decoration: none; */
-  color: #888888;
-}
-
-.product-details-email-icon {
-  max-width: 20px;
-  max-height: 20px;
-  margin-left: 10px;
 }

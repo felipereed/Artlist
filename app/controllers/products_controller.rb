@@ -17,6 +17,12 @@ class ProductsController < ApplicationController
     render json: @product
   end
 
+  # GET /products/byuser/1
+  def product_by_user
+    @products = Product.where("user_id = #{params[:id]}")
+    render json: @products
+  end
+
   # POST /products
   def create
     @product = Product.new(product_params)
