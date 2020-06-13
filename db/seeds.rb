@@ -21,6 +21,7 @@ categories = [
   'Weaving',
   'Grafitti',
   'Drawing',
+  'Painting',
   'Poster',
   'Pottery',
   'Photography',

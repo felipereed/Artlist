@@ -19,6 +19,7 @@ export default class CategoryList extends Component {
     "/images/categories/metal-craft.png",
     "/images/categories/mixed-media.png",
     "/images/categories/needlework.png",
+    "/images/categories/painting.png",
     "/images/categories/paper-craft.png",
     "/images/categories/photography.png",
     "/images/categories/poster.png",
