@@ -29,7 +29,6 @@ export default class App extends Component {
     const options = categories.map((category) => {
       return { value: category.id, label: category.name }
     })
-    console.log(options);
     
     this.setState({ categories: options })
     this.handleVerify()
@@ -41,10 +40,10 @@ export default class App extends Component {
   }
 
   handleValidateUser = async (user) => {
-    console.log(user);
+    
     
     const currentUser = await validateUser(user)
-    console.log(currentUser);
+    
     
     this.setState({ currentUser: currentUser })
   }
