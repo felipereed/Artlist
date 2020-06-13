@@ -24,14 +24,14 @@ export default class Header extends Component {
         <Link to="/home">
           <img
             className="header-icons"
-            src="images/home.png"
+            src="/images/home.png"
             alt="home link"
           ></img>
         </Link>
         <img
           onClick={this.toggleDropdown}
           className="header-icons"
-          src="images/account.png"
+          src="/images/account.png"
           alt="account link"
         ></img>
         <div className={`header-dropdown-menu ${this.state.hiddenDropdown}`}>
@@ -43,7 +43,7 @@ export default class Header extends Component {
                   <p>Sell your art</p>
                   <img
                     className="header-menu-icons"
-                    src="images/sell.png"
+                    src="/images/sell.png"
                     alt="sell your item"
                   ></img>
                 </div>
@@ -57,7 +57,7 @@ export default class Header extends Component {
                   <p>View your items</p>
                   <img
                     className="header-menu-icons"
-                    src="images/view.png"
+                    src="/images/view.png"
                     alt="sell your item"
                   ></img>
                 </div>
@@ -72,7 +72,7 @@ export default class Header extends Component {
                   <p>Log out</p>
                   <img
                     className="header-menu-icons"
-                    src="images/exit.png"
+                    src="/images/exit.png"
                     alt="sell your item"
                   ></img>
                 </div>
@@ -86,7 +86,7 @@ export default class Header extends Component {
                   <p>Sign up/Log in</p>
                   <img
                     className="header-menu-icons"
-                    src="images/register.png"
+                    src="/images/register.png"
                   ></img>
                 </div>
               </Link>

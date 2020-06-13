@@ -49,7 +49,7 @@ export default class CreateProduct extends Component {
     }
     return (
       <div>
-        <img className='create-logo-container' src='images/logo.png' alt='logo'></img>
+        <img className='create-logo-container' src='/images/logo.png' alt='logo'></img>
         <form className='create-form-container' onSubmit={this.handleSubmit}>
         <input
             className='create-form'

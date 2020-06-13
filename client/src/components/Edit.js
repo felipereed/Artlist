@@ -72,7 +72,7 @@ export default class Edit extends Component {
     }
     return (
       <div>
-        <img className='edit-logo-container' src='images/logo.png' alt='logo'></img>
+        <img className='edit-logo-container' src='/images/logo.png' alt='logo'></img>
         <form className='edit-form-container' onSubmit={this.handleSubmit}>
           <input
             value={this.state.image_url}

@@ -48,7 +48,7 @@ export default class SignUp extends Component {
     }
     return (
       <div>
-        <img className='signup-logo-container' src="images/logo.png" alt="logo"></img>
+        <img className='signup-logo-container' src="/images/logo.png" alt="logo"></img>
         <form className='signup-form-container' onSubmit={this.handleSubmit}>
           <input
             className='signup-form'
