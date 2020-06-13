@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   def show
-    @product = Product.joins(:user).select('products.*, users.username, users.email').find(params[:id])
+    @product = Product.joins(:user, :category).select('products.*, users.username, users.email, categories.name as category_name').find(params[:id])
     render json: @product
   end
 

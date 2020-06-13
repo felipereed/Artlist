@@ -18,6 +18,7 @@ import { createProduct } from './services/product'
 import Product from "./components/Product";
 import ProductDetails from "./components/ProductDetails";
 import Artist from './components/Artist'
+import Edit from './components/Edit'
 
 export default class App extends Component {
   state = {
@@ -110,7 +111,12 @@ export default class App extends Component {
                 </Layout>
               )}
             ></Route>
-            <Route path="/:id/update"></Route>
+            <Route
+              path="/:id/edit" render={(props) => (
+                <Layout>
+                  <Edit productId={props.match.params.id} categories={this.state.categories}/>
+                </Layout>
+              )}></Route>
             <Route
               path='/w'
               render={() => (

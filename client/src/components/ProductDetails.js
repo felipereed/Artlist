@@ -26,7 +26,9 @@ export default class ProductDetails extends Component {
             <div className="product-details-title">
               <p>{product.name}</p>
             </div>
-          
+            <div>
+              <p>{category_name}</p>
+            </div>
             <div className="product-detail-image-container">
               <img
                 className="product-details-image"
