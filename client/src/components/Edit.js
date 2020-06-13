@@ -46,11 +46,16 @@ export default class Edit extends Component {
       name: '',
       category_id: '',
       price: '',
+      selectedCategory: null,
       id: ''
     })
   }
   async componentDidMount() {
     const product = await getProduct(this.props.productId)
+    console.log(product.category_id);
+    console.log(this.props.categories.find(category => category.value == product.category_id));
+    
+    
     this.setState({
       image_url: product.image_url,
       name: product.name,
@@ -101,7 +106,7 @@ export default class Edit extends Component {
             type="text"
             onChange={this.handleChange}
           />
-          <button className='edit-submit-button' type="submit" value="submit">Edit</button>
+          <button className='edit-submit-button' type="submit" value="submit">Apply</button>
         </form>
       </div>
     )

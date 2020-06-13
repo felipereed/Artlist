@@ -11,6 +11,9 @@ export default class Header extends Component {
         </Link>
         
         <img className='header-icons' src='images/account.png' alt='account link'></img>
+        <div>
+          
+        </div>
       </div>
     )
   }

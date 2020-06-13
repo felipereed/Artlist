@@ -15,16 +15,6 @@ export default class Artist extends Component {
    await this.initializePage()
   }
 
-  async componentDidUpdate(prev) {
-    console.log(this.props.location);
-    console.log([prev.location]);
-    
-    
-    if (this.props.location != prev.location) {
-      await this.initializePage()
-    }
-  }
-
   async initializePage() {
      //calls products api to get products based on user id
      const products = await getProductsByUser(this.props.userId);

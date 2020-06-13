@@ -92,7 +92,7 @@ export default class App extends Component {
               path="/:id/details"
               render={(props) => (
                 <Layout>
-                  <ProductDetails productId={props.match.params.id} />
+                  <ProductDetails currentUser={this.state.currentUser} productId={props.match.params.id} />
                 </Layout>
               )}></Route>
             <Route

@@ -16,9 +16,39 @@ export default class ProductDetails extends Component {
     this.setState({ product: product });
   }
 
+  handleProductDelete = async (e) => {
+    // call api to delete product
+
+    // refresh the artist product list
+  }
+
+  artistLoggedInRender(productId) {
+  return (
+    <div className='product-details-edit-delete'>
+      <Link to={`/${productId}/edit`}><button className="product-details-submit-button">Edit</button></Link>
+      <button className="product-details-submit-button" onClick={this.handleProductDelete}>Delete</button>
+    </div>
+    
+  )
+  } 
+  artistNotLoggedInRender(product) {
+    return (
+      <div>
+        <EmailArtistLink email={product.email} name={product.name} />
+        <Link className="" to={`/${product.user_id}/artist`}>
+      <button className='product-details-submit-button'>Artist's Page</button>
+    </Link>
+      </div>
+    )
+  }
+
+  artistPage(productUserId) {
+    return this.props.currentUser && this.props.currentUser.id == productUserId
+  }
+    
+
   render() {
     const product = this.state.product;
-
     return (
       <>
         {this.state.product ? (
@@ -39,11 +69,9 @@ export default class ProductDetails extends Component {
             <div className="product-details-info">
               <p>{product.price}</p>
               <p>By {product.username}</p>
-              <EmailArtistLink email={product.email} name={product.name}/>
+              
             </div>
-            <Link className="" to={`/${product.user_id}/artist`}>
-              <button className='product-details-submit-button' type="submit" value="submit">Artist's Page</button>
-            </Link>
+            {(this.artistPage(product.user_id)) ? this.artistLoggedInRender(product.id) : this.artistNotLoggedInRender(product) }
           </div>
         ) : (
           <div>Loading...</div>
