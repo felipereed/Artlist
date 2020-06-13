@@ -42,3 +42,7 @@
   right: 10px;
   top: 110%;
 }
+
+.header-hide-dropdown {
+  display: none;
+}

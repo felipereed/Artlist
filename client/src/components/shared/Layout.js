@@ -6,9 +6,9 @@ export default class Layout extends Component {
   render() {
     return (
       <div>
-        <Header user={this.props.user} />
+        <Header handleLogOut={this.props.handleLogOut} currentUser={this.props.currentUser} />
         <div>{this.props.children}</div>
-        <Footer user={this.props.user} />
+        <Footer />
       </div>
     );
   }
