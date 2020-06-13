@@ -1,0 +1,25 @@
+.product-details-container {
+  background-color: whitesmoke;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product-details-title {
+  color: #888888;
+  font-size: 20px;
+
+}
+
+.product-detail-image-container {
+  
+}
+
+.product-details-image {
+  max-width: 100%;
+  
+}
+
+.product-details-info {
+  color: #888888;
+  font-size: 18px;
+}

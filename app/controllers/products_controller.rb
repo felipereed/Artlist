@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[show update destroy]
+  before_action :set_product, only: %i[update destroy]
   before_action :authorize_request, only: %i[update create destroy]
 
   # GET /products
@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   def show
+    @product = Product.joins(:user).select('products.*, users.username').find(params[:id])
     render json: @product
   end
 

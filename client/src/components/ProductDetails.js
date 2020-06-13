@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { getProduct } from "../services/product";
+import './ProductDetails.css'
 
 export default class ProductDetails extends Component {
   state = {
@@ -9,6 +10,8 @@ export default class ProductDetails extends Component {
 
   async componentDidMount() {
     const product = await getProduct(this.props.productId);
+    console.log(product);
+    
     this.setState({ product: product });
   }
 
@@ -18,21 +21,24 @@ export default class ProductDetails extends Component {
     return (
       <>
         {this.state.product ? (
-          <div className="product-container">
-            <div className="product-image-container">
+          <div className="product-details-container">
+            <div className="product-details-title">
+              <p>{product.name}</p>
+            </div>
+          
+            <div className="product-detail-image-container">
               <img
-                className="product-image"
+                className="product-details-image"
                 src={product.image_url}
-                alt="product image"
+                alt=""
               ></img>
             </div>
-            <div className="product-info">
-              <p>{product.name}</p>
+            <div className="product-details-info">
               <p>{product.price}</p>
               <p>By {product.username}</p>
             </div>
             <Link
-              className="product-more-details-link"
+              className=""
               to={`/${product.id}/details`}
             >
               More details
