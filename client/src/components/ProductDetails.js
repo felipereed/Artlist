@@ -37,7 +37,7 @@ export default class ProductDetails extends Component {
               <p>{product.price}</p>
               <p>By {product.username}</p>
               <div>
-                <a className='product-details-email-link' href=''>Email artist for info</a>
+                <a className='product-details-email-link' href={`mailto:${product.email}?subject=ARTlist: ${product.name} inquiry.&body=Hi, I saw your ${product.name} piece on ARTlist, and I would like to buy it. Can you please send me some information? Thanks!`}>Email artist for info</a>
                 <img className='product-details-email-icon' src='/images/emailartist.png'></img>
               </div>
             </div>
