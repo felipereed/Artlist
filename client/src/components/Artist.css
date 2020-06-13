@@ -1,0 +1,20 @@
+.artist-page-container {
+  
+}
+
+em {
+  font-weight: 100;
+  font-weight: lighter;
+  color: grey;
+}
+
+.artist-title {
+  color: #888888
+}
+
+.artist-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
