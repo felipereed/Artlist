@@ -36,12 +36,13 @@ export default class ProductDetails extends Component {
             <div className="product-details-info">
               <p>{product.price}</p>
               <p>By {product.username}</p>
+              <div>
+                <a className='product-details-email-link' href=''>Email artist for info</a>
+                <img className='product-details-email-icon' src='/images/emailartist.png'></img>
+              </div>
             </div>
-            <Link
-              className=""
-              to={`/${product.id}/details`}
-            >
-              More details
+            <Link className="" to={`/${product.user_id}/artist`}>
+              <button className='product-details-submit-button' type="submit" value="submit">Artist's Page</button>
             </Link>
           </div>
         ) : (
