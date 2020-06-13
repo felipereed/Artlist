@@ -34,6 +34,16 @@ export default class Home extends Component {
     await this.getAllProducts();
   }
 
+  async componentDidUpdate(prev) {
+    console.log(this.props.location);
+    console.log([prev.location]);
+    
+    
+    if (this.props.location != prev.location) {
+      await this.getAllProducts()
+    }
+  }
+
   render() {
     return (
       <div>

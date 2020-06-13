@@ -12,15 +12,30 @@ export default class Artist extends Component {
     email: "",
   };
   async componentDidMount() {
-    //calls products api to get products based on user id
-    const products = await getProductsByUser(this.props.userId);
-    this.setState({ products: products });
-    //calls users api to get users specific info
-    const user = await getUser(this.props.userId);
-    this.setState({ username: user.username });
-    this.setState({ pronouns: user.pronouns });
-    this.setState({ email: user.email });
+   await this.initializePage()
   }
+
+  async componentDidUpdate(prev) {
+    console.log(this.props.location);
+    console.log([prev.location]);
+    
+    
+    if (this.props.location != prev.location) {
+      await this.initializePage()
+    }
+  }
+
+  async initializePage() {
+     //calls products api to get products based on user id
+     const products = await getProductsByUser(this.props.userId);
+     this.setState({ products: products });
+     //calls users api to get users specific info
+     const user = await getUser(this.props.userId);
+     this.setState({ username: user.username });
+     this.setState({ pronouns: user.pronouns });
+     this.setState({ email: user.email });
+  }
+
   render() {
     return (
       <div className='artist-page-container'>

@@ -46,7 +46,6 @@ export default class Edit extends Component {
       name: '',
       category_id: '',
       price: '',
-      user_id: '',
       id: ''
     })
   }
@@ -64,7 +63,7 @@ export default class Edit extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to={`${this.state.user_id}/artist`} />
+      return <Redirect to={`/${this.state.user_id}/artist`} />
     }
     return (
       <div>
