@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.joins(:user).select('products.*, users.username').all
+    @products = Product.joins(:user).select('products.*, users.username').order('updated_at DESC')
     puts @products.name
     render json: @products
   end
@@ -19,13 +19,13 @@ class ProductsController < ApplicationController
 
   # GET /products/byuser/1
   def products_by_user
-    @products = Product.joins(:user).select('products.*, users.username').where("user_id = #{params[:id]}")
+    @products = Product.joins(:user).select('products.*, users.username').where("user_id = #{params[:id]}").order('updated_at DESC')
     render json: @products
   end
 
   # GET /products/bycategory/1
   def products_by_category
-    @products = Product.joins(:user).select('products.*, users.username').where("category_id = #{params[:id]}")
+    @products = Product.joins(:user).select('products.*, users.username').where("category_id = #{params[:id]}").order('updated_at DESC')
     render json: @products
   end
 
