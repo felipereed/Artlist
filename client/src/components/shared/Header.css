@@ -2,7 +2,6 @@
   background-color: #F7AE4E;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
   margin-bottom: 40px;
   box-shadow: 5px 10px 18px #888888;
   position: relative;
@@ -11,6 +10,15 @@
 .header-icons {
   max-width: 50px;
   max-height: 50px;
+  margin: auto 10px auto 0;
+}
+
+.header-icons-home-link {
+  margin: auto 0;
+}
+
+.header-icons-home-image {
+  max-height:80px;
 }
 
 .header-name-and-icons {

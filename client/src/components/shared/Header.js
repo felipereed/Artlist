@@ -21,10 +21,10 @@ export default class Header extends Component {
     const userLoggedIn = this.props.currentUser;
     return (
       <div className="header-image-container">
-        <Link to="/home">
+        <Link className="header-icons-home-link" to="/home">
           <img
-            className="header-icons"
-            src="/images/home.png"
+            className="header-icons-home-image"
+            src="/images/homelogo.png"
             alt="home link"
           ></img>
         </Link>
