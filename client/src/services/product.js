@@ -2,6 +2,7 @@ import api from "./api-helper"
 
 export const createProduct = async (product) => {
   const resp = await api.post('/products', { product })
+  return resp.data
 }
 
 export const getProducts = async () => {

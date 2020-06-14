@@ -26,6 +26,10 @@ export default class Artist extends Component {
      this.setState({ email: user.email });
   }
 
+  refreshArtistProducts = async() => {
+
+  }
+
   render() {
     return (
       <div className='artist-page-container'>

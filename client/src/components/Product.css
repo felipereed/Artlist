@@ -22,8 +22,7 @@
 .product-info {
   color: #888888;
   font-size: 15px;
-  align-items: left;
-  text-align: justify;
+  text-align: left;
 }
 
 .product-info > p {

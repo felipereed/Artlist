@@ -9,7 +9,8 @@ export default class CreateProduct extends Component {
     name: '',
     category_id: '',
     price: '',
-    redirect: false
+    redirect: false,
+    newProductId: ''
   }
 
   handleChange = (e) => {
@@ -25,13 +26,16 @@ export default class CreateProduct extends Component {
     })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
-    this.props.handleCreateProduct({
+    let newProduct = await this.props.handleCreateProduct({
       image_url: this.state.image_url,
       name: this.state.name,
       category_id: this.state.category_id,
       price: this.state.price
+    })
+    this.setState({
+      newProductId: newProduct.id
     })
     this.setState({
       redirect: true
@@ -45,7 +49,7 @@ export default class CreateProduct extends Component {
   }
   render() {
     if (this.state.redirect) {
-      return <Redirect to={`/${this.props.user.id}/artist`} />
+      return <Redirect to={`/${this.state.newProductId}/details`} />
     }
     return (
       <div>

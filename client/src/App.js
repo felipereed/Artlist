@@ -51,7 +51,7 @@ export default class App extends Component {
   }
 
   handleCreateProduct = async (product) => {
-    await createProduct(product)
+    return await createProduct(product)
   }
 
   handleLogOut = () => {

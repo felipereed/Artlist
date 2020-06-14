@@ -46,8 +46,7 @@ export default class Edit extends Component {
       name: '',
       category_id: '',
       price: '',
-      selectedCategory: null,
-      id: ''
+      selectedCategory: null
     })
   }
   async componentDidMount() {
@@ -68,7 +67,7 @@ export default class Edit extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to={`/${this.state.user_id}/artist`} />
+      return <Redirect to={`/${this.state.id}/details`} />
     }
     return (
       <div>
