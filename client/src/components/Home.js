@@ -8,6 +8,7 @@ export default class Home extends Component {
   state = {
     productsOnDisplay: [],
     hiddenProducts: [],
+    filteredByCategory: false
   };
 
   getAllProducts = async () => {
@@ -16,6 +17,7 @@ export default class Home extends Component {
       productsOnDisplay: products.splice(0, 10),
       hiddenProducts: products.splice(0)
     });
+    this.setState({ filteredByCategory: false })
   };
 
   handleGetProductsByCategory = async (id) => {
@@ -23,8 +25,8 @@ export default class Home extends Component {
     this.setState({
       productsOnDisplay: products, hiddenProducts: []
     })
+    this.setState({ filteredByCategory: true })
   }
-  
 
   moreProducts = () => {
     if (this.state.hiddenProducts.length > 0) {
@@ -61,6 +63,12 @@ export default class Home extends Component {
       <div>
         <CategoryList handleGetProductsByCategory={this.handleGetProductsByCategory}/>
         <hr className="home-divider" />
+        {(this.state.filteredByCategory) ? 
+          <div className="home-go-back-link">
+            <img src='/images/goback.png' alt='go back button' onClick={this.getAllProducts}></img>
+            <p>View All Products</p>
+          </div> : 
+        <></>}
         <div className="home-products">
           {this.state.productsOnDisplay.map((item, key) => (
             <Product key={key} product={item} />
