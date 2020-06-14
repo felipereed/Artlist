@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CategoryList from "./CategoryList";
 import "./Home.css";
 import Product from "./Product";
-import { getProducts } from "../services/product";
+import { getProducts, getProductsByCategory } from "../services/product";
 
 export default class Home extends Component {
   state = {
@@ -12,9 +12,19 @@ export default class Home extends Component {
 
   getAllProducts = async () => {
     const products = await getProducts();
-    this.setState({ productsOnDisplay: products.splice(0, 10) });
-    this.setState({ hiddenProducts: products.splice(0) });
+    this.setState({
+      productsOnDisplay: products.splice(0, 10),
+      hiddenProducts: products.splice(0)
+    });
   };
+
+  handleGetProductsByCategory = async (id) => {
+    const products = await getProductsByCategory(id)
+    this.setState({
+      productsOnDisplay: products, hiddenProducts: []
+    })
+  }
+  
 
   moreProducts = () => {
     if (this.state.hiddenProducts.length > 0) {
@@ -25,8 +35,10 @@ export default class Home extends Component {
       let productsOnDisplay = [this.state.productsOnDisplay];
       productsOnDisplay.push(productsToDisplay);
       //updating the state with a new array of hidden products and new array of displayed products
-      this.setState({ hiddenProducts: hiddenProducts });
-      this.setState({ productsOnDisplay: productsOnDisplay });
+      this.setState({
+        hiddenProducts: hiddenProducts,
+        productsOnDisplay: productsOnDisplay
+      });
     }
   };
 
@@ -47,7 +59,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <CategoryList />
+        <CategoryList handleGetProductsByCategory={this.handleGetProductsByCategory}/>
         <hr className="home-divider" />
         <div className="home-products">
           {this.state.productsOnDisplay.map((item, key) => (

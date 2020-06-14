@@ -26,3 +26,8 @@ export const editProduct = async (product) => {
 export const deleteProduct = async (id) => {
   const resp = await api.delete(`/products/${id}`)
 }
+
+export const getProductsByCategory = async (id) => {
+  const resp = await api.get(`/products/bycategory/${id}`)
+  return resp.data
+}

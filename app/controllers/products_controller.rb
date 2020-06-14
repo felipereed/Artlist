@@ -18,8 +18,14 @@ class ProductsController < ApplicationController
   end
 
   # GET /products/byuser/1
-  def product_by_user
+  def products_by_user
     @products = Product.joins(:user).select('products.*, users.username').where("user_id = #{params[:id]}")
+    render json: @products
+  end
+
+  # GET /products/bycategory/1
+  def products_by_category
+    @products = Product.joins(:user).select('products.*, users.username').where("category_id = #{params[:id]}")
     render json: @products
   end
 
