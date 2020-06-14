@@ -31,15 +31,19 @@ export default class Home extends Component {
   moreProducts = () => {
     if (this.state.hiddenProducts.length > 0) {
       // getting the hidden products and splicing out the next 10 to display
-      let hiddenProducts = [this.state.hiddenProducts];
+      let hiddenProducts = this.state.hiddenProducts;
+      console.log(hiddenProducts)
       let productsToDisplay = hiddenProducts.splice(0, 10);
+      console.log(productsToDisplay)
       // getting the currently displayed products and pushing the 10 I just spliced
-      let productsOnDisplay = [this.state.productsOnDisplay];
-      productsOnDisplay.push(productsToDisplay);
+      let productsOnDisplay = this.state.productsOnDisplay;
+      console.log(productsOnDisplay)
+      let results = productsOnDisplay.concat(productsToDisplay);
+      console.log(productsOnDisplay)
       //updating the state with a new array of hidden products and new array of displayed products
       this.setState({
         hiddenProducts: hiddenProducts,
-        productsOnDisplay: productsOnDisplay
+        productsOnDisplay: results
       });
     }
   };
