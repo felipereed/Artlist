@@ -52,7 +52,7 @@ export default class CreateProduct extends Component {
       return <Redirect to={`/${this.state.newProductId}/details`} />
     }
     return (
-      <div>
+      <div className="create-container">
         <img className='create-logo-container' src='/images/logo.png' alt='logo'></img>
         <form className='create-form-container' onSubmit={this.handleSubmit}>
         <input

@@ -37,3 +37,48 @@
   border-radius: 30px;
   border: 1px white; 
 }
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .create-form-container  {
+      width: 35%;
+      margin: 0 auto;
+    }
+
+    .create-submit-button  {
+      margin: 20px auto 25px auto;
+      min-width: 130px;
+      width: 20%;
+    }
+
+    .create-container {
+      height: 79vh;
+    }
+
+    .signup-logo-container {
+      margin-bottom: 0;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1199px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+   
+    .create-form-container  {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .create-submit-button  {
+      margin: 20px auto 25px auto;
+      min-width: 130px;
+      width: 20%;
+    }
+
+    .create-container {
+      height: 79vh;
+    }
+    
+}
