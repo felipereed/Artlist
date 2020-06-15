@@ -7,9 +7,9 @@ export default class Footer extends Component {
       <div className="footer-image-container">
         <div>
           <a href='https://github.com/felipereed' target="_blank">
-            <img className="footer-icons" src="/images/github.png" alt="github link"></img>
+            <img className="footer-icons" src="/images/github3.png" alt="github link"></img>
           </a>
-          <a href='www.linkedin.com/in/felipereed' target='_blank'>
+          <a href='https://www.linkedin.com/in/felipereed' target='_blank'>
             <img className="footer-icons" src="/images/linkedin.png" alt="linkedin link"></img>
           </a>
           <a href='mailto:contactfelipelins@gmail.com'>

@@ -4,7 +4,7 @@
   justify-content: space-between;
 }
 
-.welcome-deader-text {
+.welcome-header-text {
   text-decoration: None;
   font-size: 25px;
   font-weight: bold;
@@ -62,4 +62,48 @@
 
 .welcome-footer {
   background-color: #F7AE4E;
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .welcome-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .welcome-desktop-media-query {
+      width: 50%;
+      min-height: 100vh;
+      background-color: #F7AE4E;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .welcome-main-container {
+      width: 50%;
+    }
+
+    .welcome-header-links {
+      display: none;
+    }
+
+    .welcome-app-description { 
+      width:75%;
+      margin: 0 auto;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1199px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .welcome-header-text {
+      display: none;
+    }
+    .welcome-header-links {
+      padding: 30px;
+    }
+
 }

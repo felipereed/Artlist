@@ -28,3 +28,16 @@
 .categorylist-title {
   margin: 25px;
 }
+
+.category-list-arrows {
+  display: none
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .category-list-arrows {
+      display: block;
+    }
+}
