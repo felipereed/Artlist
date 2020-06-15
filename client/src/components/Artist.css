@@ -1,5 +1,6 @@
 .artist-page-container {
   padding-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 em {
@@ -20,11 +21,34 @@ em {
 
 .artist-page-website {
   color: #888888;
-  margin-right: 50px;
   font-size: 25px;
+  margin: auto auto 0 0;
 }
 
 .artist-website-email-container { 
   display: flex;
   justify-content: center;
+}
+
+.artist-contact-image .artist-page-email-image {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.artist-business-card {
+  border: 1px solid whitesmoke;
+  border-radius: 20px;
+  box-shadow: 5px 10px 18px #888888;
+  margin: 10px;
+  padding: 10px 20px 40px 20px;
+  background-color: whitesmoke;
+  display: inline-block
+}
+
+.artist-info-container {
+  display: flex;
+}
+
+.artist-page-email-artist-link {
+  margin: auto auto 0 0;
 }

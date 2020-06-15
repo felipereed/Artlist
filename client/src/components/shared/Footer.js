@@ -3,8 +3,9 @@ import "./Footer.css";
 
 export default class Footer extends Component {
   render() {
+    const welcomeFooterClass = (this.props.welcomeFooter) ? 'footer-image-container-welcome' : 'footer-image-container'
     return (
-      <div className="footer-image-container">
+      <div className={welcomeFooterClass}>
         <div>
           <a href='https://github.com/felipereed' target="_blank">
             <img className="footer-icons" src="/images/github3.png" alt="github link"></img>
@@ -15,8 +16,8 @@ export default class Footer extends Component {
           <a href='mailto:contactfelipelins@gmail.com'>
             <img className="footer-icons" src="/images/email.png" alt="send email link"></img>
           </a>
-          <a href='https://www.instagram.com/artlistmarketplace/' target='_blank'>
-          <img className="footer-icons" src="/images/instagram.png" alt="instagram link"></img>
+          <a href='https://medium.com/@contactfelipelins/artlist-marketplace-a74d0ee97fae' target='_blank'>
+          <img className="footer-icons" src="/images/medium.png" alt="instagram link"></img>
           </a>
         </div>
       </div>

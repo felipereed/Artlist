@@ -33,33 +33,26 @@ export default class Artist extends Component {
   render() {
     return (
       <div className="artist-page-container">
-        <div>
+        <div className='artist-business-card'>
           <h1 className="artist-title">
             {this.state.username}{" "}
-            {this.state.pronouns ? (
-              <em>{"(" + this.state.pronouns + ")"}</em>
-            ) : (
-              <></>
-              )}{" "}
-            {this.state.website ? (
-              <a className="artist-page-website" href={this.state.website} target="_blank">Website</a>
-            ) : (
-                <></>
-            )}
+            {this.state.pronouns ? (<em>{"(" + this.state.pronouns + ")"}</em>) : (<></>)}{" "}
           </h1>
+          <hr />
+          {this.state.website ? (
+            <div className='artist-info-container'>
+              <img className='artist-contact-image' src='/images/magritte.png'></img>
+              <a className="artist-page-website" href={this.state.website} target="_blank">Artist's Website</a>
+            </div>) : (<></>)}
           <div className="artist-website-email-container">
-            
-            <EmailArtistLink
-            email={this.state.email}
-            name={this.state.username}
-          />
+            <img className=".artist-page-email-image" src='/images/frida.png'></img>
+            <div className='artist-page-email-artist-link'>
+              <EmailArtistLink email={this.state.email} name={this.state.username}/>
+            </div>
           </div>
-          
         </div>
         <div className="artist-products">
-          {this.state.products.map((item, key) => (
-            <Product key={key} product={item} />
-          ))}
+          {this.state.products.map((item, key) => (<Product key={key} product={item} />))}
         </div>
       </div>
     );

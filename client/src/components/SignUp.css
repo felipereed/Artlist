@@ -1,6 +1,7 @@
 .signup-form-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 150px;
 }
 
 .signup-logo-container {

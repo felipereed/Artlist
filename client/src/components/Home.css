@@ -8,6 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 150px;
 }
 
 .home-more-button {
@@ -18,7 +19,7 @@
   border-radius: 30px;
   border: 1px solid #F7AE4E;
   box-shadow: 5px 10px 18px #888888;
-  margin: 40px
+  margin: 40px 0 150px 0;
 }
 
 .home-go-back-link {
@@ -34,4 +35,25 @@
   font-weight: 500;
   color: gray;
   font-size: 22px;
+}
+
+.home-container {
+  min-height: 100vh;
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .home-container {
+      height: 100vh;
+    }
+  } 
+
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .home-container {
+      height: 100%;
+    }
 }

@@ -15,7 +15,7 @@
   border-radius: 30px;
   border: 1px solid #F7AE4E;
   box-shadow: 5px 10px 18px #888888;
-  margin: 50px 120px;
+  margin: 50px 120px 150px 120px;
 }
 
 .create-form {
@@ -78,7 +78,7 @@
     }
 
     .create-container {
-      height: 79vh;
+      height: 80vh;
     }
     
 }

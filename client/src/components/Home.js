@@ -14,7 +14,7 @@ export default class Home extends Component {
   getAllProducts = async () => {
     const products = await getProducts();
     this.setState({
-      productsOnDisplay: products.splice(0, 10),
+      productsOnDisplay: products.splice(0, 20),
       hiddenProducts: products.splice(0)
     });
     this.setState({ filteredByCategory: false })
@@ -33,7 +33,7 @@ export default class Home extends Component {
       // getting the hidden products and splicing out the next 10 to display
       let hiddenProducts = this.state.hiddenProducts;
       console.log(hiddenProducts)
-      let productsToDisplay = hiddenProducts.splice(0, 10);
+      let productsToDisplay = hiddenProducts.splice(0, 20);
       console.log(productsToDisplay)
       // getting the currently displayed products and pushing the 10 I just spliced
       let productsOnDisplay = this.state.productsOnDisplay;
@@ -64,7 +64,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className='home-container'>
         <CategoryList handleGetProductsByCategory={this.handleGetProductsByCategory}/>
         <hr className="home-divider" />
         {(this.state.filteredByCategory) ? 

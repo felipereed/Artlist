@@ -47,7 +47,7 @@ export default class Welcome extends Component {
               showcase and sell their original pieces in their own terms.
             </p>
             <div className="welcome-footer">
-              <Footer />
+              <Footer welcomeFooter={true} />
             </div>
           </div>
         </div>

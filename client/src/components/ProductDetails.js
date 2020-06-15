@@ -42,7 +42,7 @@ export default class ProductDetails extends Component {
   artistNotLoggedInRender(product) {
     return (
       <div>
-        <EmailArtistLink email={product.email} name={product.name} />
+        <EmailArtistLink emailProductDetails={true} email={product.email} name={product.name} />
         <Link className="" to={`/${product.user_id}/artist`}>
           <button className="product-details-submit-button">
             Artist's Page

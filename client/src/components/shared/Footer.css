@@ -2,12 +2,37 @@
   display: flex;
   justify-content: center;
   height: 64px;
-  background-color:#F7AE4E;
-  padding: 20px;
+  background-color: #f7ae4e;
+  padding: 20px 0 10px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-image-container-welcome {
+  display: flex;
+  justify-content: center;
+  height: 64px;
+  background-color: #f7ae4e;
+  padding: 20px 0 10px 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-icons {
   max-height: 50px;
   max-width: 50px;
   margin: auto 5px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1199px) and (-webkit-min-device-pixel-ratio: 1) {
+  .footer-image-container {
+    display: flex;
+    justify-content: center;
+    height: 64px;
+    background-color: #f7ae4e;
+    padding: 20px 0 10px 0;
+  }
 }
