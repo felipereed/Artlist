@@ -47,7 +47,7 @@ export default class SignUp extends Component {
       return <Redirect to='/home' />
     }
     return (
-      <div>
+      <div className='signup-container'>
         <img className='signup-logo-container' src="/images/logo.png" alt="logo"></img>
         <form className='signup-form-container' onSubmit={this.handleSubmit}>
           <input

@@ -21,7 +21,7 @@
 .product-details-info {
   color: #888888;
   font-size: 22px;
-  text-align: justify;
+  text-align: center;
 }
 
 .product-details-submit-button {
@@ -48,3 +48,28 @@
   justify-content: space-evenly;
 }
 
+@media screen 
+  and (min-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   .product-details-info > p {
+     font-size: 40px;
+     margin-bottom: 10px;
+     margin-top: 10px;
+   }
+
+   .product-details-image {
+     max-height: 700px;
+     max-width: 900px;
+   }
+
+   .product-details-container {
+     display: flex;
+     justify-content: space-evenly;
+     height: 79vh;
+   }
+
+   .product-details-title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}

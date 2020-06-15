@@ -36,7 +36,7 @@ export default class LogIn extends Component {
       return <Redirect to='./home' />
     }
     return (
-      <div>
+      <div className="login-container">
         <img className='login-logo-container' src='/images/logo.png' alt='logo'></img>
         <form className='login-form-container' onSubmit={this.handleSubmit}>
           <input
