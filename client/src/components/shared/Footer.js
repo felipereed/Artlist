@@ -7,7 +7,7 @@ export default class Footer extends Component {
     return (
       <div className={welcomeFooterClass}>
         <div>
-          <a href='https://github.com/felipereed' target="_blank">
+          <a href='https://github.com/felipereed/Artlist' target="_blank">
             <img className="footer-icons" src="/images/github3.png" alt="github link"></img>
           </a>
           <a href='https://www.linkedin.com/in/felipereed' target='_blank'>

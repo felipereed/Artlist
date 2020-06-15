@@ -20,8 +20,10 @@ class UsersController < ApplicationController
     p user_params
     @user = User.new(user_params)
 
-    if @user.save
-      render json: @user, status: :created, location: @user
+    # authenticate method provided by Bcrypt and 'has_secure_password'
+    if @user.save && @user.authenticate(user_params[:password])
+      @token = encode({ user_id: @user.id })
+      render json: { user: @user, token: @token }, status: :ok
     else
       render json: @user.errors, status: :unprocessable_entity
     end
