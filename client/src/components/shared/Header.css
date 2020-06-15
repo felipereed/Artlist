@@ -49,6 +49,7 @@
   position: absolute;
   right: 10px;
   top: 110%;
+  z-index: 1;
 }
 
 .header-hide-dropdown {

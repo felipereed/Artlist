@@ -17,6 +17,13 @@ export default class Header extends Component {
       })
     }
   }
+
+  closeDropdown = () => {
+    this.setState({
+      hiddenDropdown: 'header-hide-dropdown'
+    })
+  }
+  
   render() {
     const userLoggedIn = this.props.currentUser;
     return (
@@ -34,7 +41,7 @@ export default class Header extends Component {
           src="/images/account.png"
           alt="account link"
         ></img>
-        <div className={`header-dropdown-menu ${this.state.hiddenDropdown}`}>
+        <div className={`header-dropdown-menu ${this.state.hiddenDropdown}`} onBlur={this.closeDropdown}>
           {userLoggedIn ? (
             //if user is logged in
             <div>

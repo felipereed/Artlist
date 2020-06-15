@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./CategoryList.css";
+import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 export default class CategoryList extends Component {
   categories = [
@@ -34,14 +35,15 @@ export default class CategoryList extends Component {
     { url: "/images/categories/weaving.png", id: 28 },
     { url: "/images/categories/wood-craft.png", id: 29 },
   ];
+
   render() {
     return (
       <div>
         <div className="categorylist-title">
           <h2>Categories</h2>
         </div>
-        <div className="categorylist-container">
-          {this.categories.map((category) => (
+        <ScrollMenu 
+          data={this.categories.map((category) => (
             <div
               className="categorylist-horizontal-scroll"
               key={category.id}
@@ -53,7 +55,13 @@ export default class CategoryList extends Component {
               }}
             ></div>
           ))}
-        </div>
+          arrowLeft={(
+            <img src="/images/goback.png"></img>
+          )}
+          arrowRight={(
+            <img src="/images/goback.png"></img>
+          )}
+        />
       </div>
     );
   }
