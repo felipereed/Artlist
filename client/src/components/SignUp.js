@@ -21,26 +21,30 @@ export default class SignUp extends Component {
   };
 
   handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.handleCreateUser({
-      username: this.state.username,
-      pronouns: this.state.pronouns,
-      email: this.state.email,
-      website: this.state.website,
-      password: this.state.password
-    })
-    this.setState({ 
-      redirect: true
-    })
-    this.setState({
-      username: "",
-      pronouns: "",
-      email: "",
-      website: "",
-      password: "",
-      confirmPassword: "",
-    });
-  };
+    e.preventDefault()
+    if (this.state.password !== this.state.confirmPassword) {
+      alert ('Passwords do not match')
+    } else {
+      this.props.handleCreateUser({
+        username: this.state.username,
+        pronouns: this.state.pronouns,
+        email: this.state.email,
+        website: this.state.website,
+        password: this.state.password
+      })
+      this.setState({ 
+        redirect: true
+      })
+      this.setState({
+        username: "",
+        pronouns: "",
+        email: "",
+        website: "",
+        password: "",
+        confirmPassword: "",
+      })
+    } 
+  }
 
   render() {
     if (this.state.redirect) {

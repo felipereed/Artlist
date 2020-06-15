@@ -11,8 +11,6 @@ export default class ProductDetails extends Component {
 
   async componentDidMount() {
     const product = await getProduct(this.props.productId);
-    console.log(product);
-
     this.setState({ product: product });
   }
 

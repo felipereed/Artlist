@@ -32,14 +32,10 @@ export default class Home extends Component {
     if (this.state.hiddenProducts.length > 0) {
       // getting the hidden products and splicing out the next 10 to display
       let hiddenProducts = this.state.hiddenProducts;
-      console.log(hiddenProducts)
       let productsToDisplay = hiddenProducts.splice(0, 20);
-      console.log(productsToDisplay)
-      // getting the currently displayed products and pushing the 10 I just spliced
+      // getting the currently displayed products and pushing the 20 I just spliced
       let productsOnDisplay = this.state.productsOnDisplay;
-      console.log(productsOnDisplay)
       let results = productsOnDisplay.concat(productsToDisplay);
-      console.log(productsOnDisplay)
       //updating the state with a new array of hidden products and new array of displayed products
       this.setState({
         hiddenProducts: hiddenProducts,
@@ -52,11 +48,7 @@ export default class Home extends Component {
     await this.getAllProducts();
   }
 
-  async componentDidUpdate(prev) {
-    console.log(this.props.location);
-    console.log([prev.location]);
-    
-    
+  async componentDidUpdate(prev) {    
     if (this.props.location != prev.location) {
       await this.getAllProducts()
     }
