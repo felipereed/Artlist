@@ -59,7 +59,7 @@ export default class CategoryList extends Component {
             <img src="/images/goback.png"></img>
           )}
           arrowRight={(
-            <img src="/images/goback.png"></img>
+            <img src="/images/goforward.png"></img>
           )}
         />
       </div>
