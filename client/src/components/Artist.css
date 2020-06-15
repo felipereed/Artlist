@@ -18,3 +18,13 @@ em {
   justify-content: center;
 }
 
+.artist-page-website {
+  color: #888888;
+  margin-right: 50px;
+  font-size: 25px;
+}
+
+.artist-website-email-container { 
+  display: flex;
+  justify-content: center;
+}

@@ -11,10 +11,6 @@ export default class EmailArtistLink extends Component {
         >
           Email artist for info
         </a>
-        <img
-          className="email-artist-icon"
-          src="/images/emailartist.png"
-        ></img>
       </div>
     );
   }
