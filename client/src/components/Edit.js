@@ -70,7 +70,7 @@ export default class Edit extends Component {
       return <Redirect to={`/${this.state.id}/details`} />
     }
     return (
-      <div>
+      <div className="edit-container">
         <img className='edit-logo-container' src='/images/logo.png' alt='logo'></img>
         <form className='edit-form-container' onSubmit={this.handleSubmit}>
           <input
