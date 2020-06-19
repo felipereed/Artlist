@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# this controller is responsible for retrieving categories from the database
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show update destroy]
 
